@@ -86,9 +86,9 @@
         text-align: center;
         margin-right: 20px;
         position: absolute;
-        top: 600px;
-        left: 37%;
-        flex-direction: column;
+        top: 578px;
+        left: 25%;
+        flex-direction: row;
     }
     .login a {
         border: 2px solid #000;
