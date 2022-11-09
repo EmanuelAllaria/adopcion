@@ -1,0 +1,93 @@
+.container_register {
+    height: calc(100vh - 257px);
+    width: 100%;
+    background: url("../img/bg_login.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title_register {
+    background: #4ab7f5;
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #000;
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+    text-align: center;
+}
+.title_register h4 {
+    FONT-WEIGHT: 900;
+    color: #000;
+    font-size: 30px;
+}
+form {
+    background: #4ab7f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+    border: 1px solid #000;
+    border-radius: 3px;
+    border-top: none;
+    padding: 20px;
+}
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+form label {
+    color: #3F2212;
+    FONT-WEIGHT: 900;
+}
+input:not(input[type="submit"]) {
+    height: 45px;
+    width: 100%;
+    border: 1px solid #3F2212;
+    border-radius: 3px;
+    background: #fff;
+}
+input::placeholder {
+    color: #000;
+}
+input[type="submit"] {
+    padding: 10px 15px;
+    border: none;
+    background: #79c9f7;
+    color: #000;
+    border-radius: 0 0 3px 3px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    input:not(input[type="submit"]) {
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    input:not(input[type="submit"]) {
+        width: 230px;
+    }
+    label {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    input:not(input[type="submit"]) {
+        width: 180px;
+    }
+}
+@media screen and (max-width: 375px) {
+    input:not(input[type="submit"]) {
+        width: 150px;
+    }
+}

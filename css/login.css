@@ -1,0 +1,26 @@
+.container_login {
+    height: calc(100vh - 257px);
+    width: 100%;
+    background: url("../img/bg_login.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title_login {
+    background: #4ab7f5;
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #000;
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+    text-align: center;
+}
+.title_login h4 {
+    FONT-WEIGHT: 900;
+    color: #000;
+    font-size: 30px;
+}

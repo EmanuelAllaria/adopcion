@@ -1,0 +1,113 @@
+.title_adopcion h1 {
+    font-size: 40px;
+    font-family: 'Pacifico', cursive;
+}
+.title_adopcion h3 {
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.selects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.selects select {
+    border: none;
+    padding: 10px 20px;
+    background: #3F2212;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0 20px 0 20px;
+}
+
+.container_cards {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 20px;
+}
+.card {
+    width: 100%;
+    height: fit-content;
+    border: 3px solid #000;
+    border-radius: 0 20px 0 20px;
+    text-align: center;
+}
+.card:hover {
+    border-radius: 20px 0 20px 0;
+}
+.img_card img {
+    height: 300px;
+    width: 300px;
+    border-bottom: 3px solid #00f941;
+    border-radius: 100%;
+    padding: 50px;
+}
+.nombre_animal h3 {
+    font-size: 20px;
+    FONT-WEIGHT: 900;
+    font-family: 'Poppins', sans-serif;
+}
+.title_card h2 {
+    font-size: 30px;
+    FONT-WEIGHT: 500;
+    color: #75eb94;
+}
+.description_card p {
+    padding: 20px;
+}
+.description_card {
+    margin: 20px;
+}
+
+.title_adopcion, .selects {
+    background: #a7f5bb;
+}
+
+option select:disabled ~ .card {
+    display: none;
+}
+
+.patita {
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    width: 30px !important;
+    height: 30px !important;
+    margin-top: 10px;
+}
+
+.description_card a {
+    background: #5BC4C6;
+    padding: 10px 46%;
+    border-radius: 0 20px 0 20px;
+    border: 2px solid #45AAC4;
+}
+
+@media screen and (max-width: 768px) {
+    .selects {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card {
+        height: 590px;
+    }
+    .description_card a {
+        padding: 10px 43%;
+    }
+    .description_card {
+        margin: 30px;
+    }
+    .card {
+        height: fit-content;
+    }
+}
