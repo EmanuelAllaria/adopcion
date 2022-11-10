@@ -83,7 +83,6 @@ header {
 
 #noticias {
     padding: 10px;
-    height: 75vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,6 +193,7 @@ banner .bg_banner .btn .redes i {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 .noticia_visible {
     display: flex !important;
