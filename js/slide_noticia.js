@@ -1,43 +1,24 @@
-let historias = document.querySelectorAll(".noticia")
+const historias = document.querySelectorAll(".noticia");
+let currentIndex = 0;
 
-let cards = 1
+function showIndex(idx) {
+  historias.forEach((el, i) => {
+    if (i === idx) {
+      el.classList.add("noticia_visible");
+    } else {
+      el.classList.remove("noticia_visible");
+    }
+  });
+}
 
 function slideNoticia() {
-    
-    cards ++
-    if(cards > 5){
-        cards = 1
-    }
-    if (cards == 1){
-        return historias[0].classList.add("noticia_visible"),
-        historias[1].classList.remove("noticia_visible"),
-        historias[2].classList.remove("noticia_visible"),
-        historias[3].classList.remove("noticia_visible"),
-        historias[4].classList.remove("noticia_visible")
-    } else if (cards == 2){
-        return historias[1].classList.add("noticia_visible"),
-        historias[0].classList.remove("noticia_visible"),
-        historias[2].classList.remove("noticia_visible"),
-        historias[3].classList.remove("noticia_visible"),
-        historias[4].classList.remove("noticia_visible")
-    } else if (cards == 3){
-        return historias[2].classList.add("noticia_visible"),
-        historias[0].classList.remove("noticia_visible"),
-        historias[1].classList.remove("noticia_visible"),
-        historias[3].classList.remove("noticia_visible"),
-        historias[4].classList.remove("noticia_visible")
-    } else if (cards == 4){
-        return historias[3].classList.add("noticia_visible"),
-        historias[0].classList.remove("noticia_visible"),
-        historias[1].classList.remove("noticia_visible"),
-        historias[2].classList.remove("noticia_visible"),
-        historias[4].classList.remove("noticia_visible")
-    } else if (cards == 5){
-        return historias[4].classList.add("noticia_visible"),
-        historias[0].classList.remove("noticia_visible"),
-        historias[1].classList.remove("noticia_visible"),
-        historias[2].classList.remove("noticia_visible"),
-        historias[3].classList.remove("noticia_visible")
-    }
+  if (!historias || historias.length === 0) return;
+  currentIndex = (currentIndex + 1) % historias.length;
+  showIndex(currentIndex);
 }
-setInterval(slideNoticia,3000)
+
+// Inicializa mostrando la primera
+if (historias && historias.length) {
+  showIndex(0);
+  setInterval(slideNoticia, 3500);
+}

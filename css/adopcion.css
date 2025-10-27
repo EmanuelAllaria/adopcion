@@ -1,113 +1,113 @@
 .title_adopcion h1 {
-    font-size: 40px;
-    font-family: 'Pacifico', cursive;
+  font-size: 40px;
+  font-family: "Pacifico", cursive;
 }
 .title_adopcion h3 {
-    font-size: 25px;
-    font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  color: var(--muted);
 }
 
 .selects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
 }
 .selects select {
-    border: none;
-    padding: 10px 20px;
-    background: #3F2212;
-    color: #fff;
-    cursor: pointer;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    border-radius: 0 20px 0 20px;
+  border: 1px solid var(--border);
+  padding: 10px 16px;
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 10px;
 }
 
 .container_cards {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 20px;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+  gap: 20px;
 }
 .card {
-    width: 100%;
-    height: fit-content;
-    border: 3px solid #000;
-    border-radius: 0 20px 0 20px;
-    text-align: center;
+  width: 100%;
+  max-width: 360px;
+  height: fit-content;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  text-align: center;
+  background: var(--card);
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease-in-out;
 }
 .card:hover {
-    border-radius: 20px 0 20px 0;
+  transform: translateY(-2px);
 }
 .img_card img {
-    height: 300px;
-    width: 300px;
-    border-bottom: 3px solid #00f941;
-    border-radius: 100%;
-    padding: 50px;
+  height: 220px;
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  padding: 0;
+  object-fit: cover;
 }
 .nombre_animal h3 {
-    font-size: 20px;
-    FONT-WEIGHT: 900;
-    font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
 }
 .title_card h2 {
-    font-size: 30px;
-    FONT-WEIGHT: 500;
-    color: #75eb94;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--primary);
 }
 .description_card p {
-    padding: 20px;
+  padding: 20px;
 }
 .description_card {
-    margin: 20px;
+  margin: 10px 20px 20px;
 }
 
-.title_adopcion, .selects {
-    background: #a7f5bb;
+.title_adopcion,
+.selects {
+  background: var(--bg-soft);
 }
 
 option select:disabled ~ .card {
-    display: none;
+  display: none;
 }
 
 .patita {
-    border: none !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-    width: 30px !important;
-    height: 30px !important;
-    margin-top: 10px;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  width: 30px !important;
+  height: 30px !important;
+  margin-top: 10px;
 }
 
 .description_card a {
-    background: #5BC4C6;
-    padding: 10px 46%;
-    border-radius: 0 20px 0 20px;
-    border: 2px solid #45AAC4;
+  background: var(--accent);
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  color: #fff;
+  display: inline-block;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 768px) {
-    .selects {
-        display: flex;
-        align-items: stretch;
-        flex-direction: column;
-        gap: 20px;
-    }
-    .card {
-        height: 590px;
-    }
-    .description_card a {
-        padding: 10px 43%;
-    }
-    .description_card {
-        margin: 30px;
-    }
-    .card {
-        height: fit-content;
-    }
+  .selects {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .description_card {
+    margin: 16px;
+  }
 }

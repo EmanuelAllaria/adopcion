@@ -1,0 +1,71 @@
+/* Estilos compartidos para formularios de autenticación */
+.auth-title {
+  background: var(--card);
+  width: min(420px, 92%);
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,.10);
+}
+.auth-title h4 {
+  font-weight: 900;
+  color: var(--text);
+  font-size: 26px;
+}
+
+.auth-form {
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+  width: min(420px, 92%);
+  border: 1px solid var(--border);
+  border-radius: 0 0 12px 12px;
+  border-top: none;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.10);
+}
+
+.auth-input {
+  height: 44px;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text);
+  padding: 10px 12px;
+}
+.auth-input::placeholder { color: var(--muted); }
+.auth-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(59,130,246,.15); }
+
+.auth-submit {
+  height: 44px;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 10px;
+  width: 100%;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+.auth-submit:hover { background: var(--accent-600); }
+
+.auth-links { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-top: 6px; 
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.auth-links a { color: var(--accent); font-weight: 600; }
+
+@media (max-width: 480px) {
+  .auth-title h4 { font-size: 22px; }
+  .auth-input, .auth-submit { height: 42px; }
+}
